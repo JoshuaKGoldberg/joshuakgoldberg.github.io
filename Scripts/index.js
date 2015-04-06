@@ -6,4 +6,4 @@ var slogans = [
     "I'm not afraid of a little DMCA notice, no sir!"
 ];
 
-$("#slogan").text(slogans[Math.floor(Math.random() * slogans.length)]);
+$(".slogan").text(slogans[Math.floor(Math.random() * slogans.length)]);
