@@ -1,0 +1,184 @@
+﻿body {
+    overflow-x: hidden;
+}
+
+/* General/section positioning */
+
+
+section[contracted] article {
+    height: 0;
+}
+
+article,
+h1 span,
+h2 span,
+footer {
+    margin: auto;
+    display: block;
+    clear: both;
+    padding: 7px 14px;
+    max-width: 980px;
+}
+
+h1 span {
+    padding: 21px 0;
+}
+
+h2 span {
+    padding: 14px;
+}
+
+article.empty {
+    display: none;
+}
+
+article:after {
+    clear: both;
+}
+
+section:first-of-type h1 {
+    text-align: center;
+    overflow: hidden;
+}
+
+section {
+    clear: both;
+
+    img {
+        margin-top: 14px;
+        margin-bottom: 14px;
+    }
+
+    .floater {
+        margin-left: 14px;
+        float: right;
+    }
+
+    .imager {
+        display: block;
+        padding-bottom: 21px;
+        margin: auto;
+        width: 70%;
+
+        .linker {
+            -ms-word-break: keep-all;
+            word-break: keep-all;
+        }
+
+        .sizer {
+            display: block;
+        }
+    }
+
+    .imager:hover {
+        width: 98%;
+    }
+}
+
+section:nth-of-type(2n) img {
+    margin-right: 28px;
+    float: left;
+}
+
+/*section:nth-of-type(2n + 1) img {*/
+section.right img {
+    margin-left: 28px;
+    float: right;
+}
+
+/*section:nth-of-type(2n + 1) h2 span {*/
+section.right h2 span {
+    text-align: right;
+}
+
+.paragraphs {
+    margin-bottom: .35em;
+    overflow: hidden;
+
+    li pre {
+        margin-bottom: 28px;
+    }
+
+    ol ol, ol ul, ul ol, ul ul {
+        padding-top: 11px;
+        padding-bottom: 3px;
+    }
+}
+
+footer {
+    p {
+        float: left;
+        margin: 14px 1% 0 1%;
+        padding-bottom: 14px;
+        width: 32%;
+    }
+
+    p:first-of-type {
+        margin-left: 0;
+    }
+
+    p:last-of-type {
+        float: right;
+        margin-right: 0;
+    }
+}
+
+
+/* Medium displays */
+
+@media screen and (max-width: 700px), (max-aspect-ratio: 1/1) {
+    #GitHubLink {
+        display: none;
+    }
+
+    footer {
+        padding-top: 2.1em;
+    }
+
+    img {
+        max-width: 210px;
+        max-height: 210px;
+    }
+
+    .paragraphs {
+        overflow: visible;
+
+        .imager {
+            width: 84%;
+            border-left: 2px solid rgba(210, 210, 210, .49);
+            border-right: 2px solid rgba(210, 210, 210, .49);
+
+            img {
+                display: none;
+            }
+        }
+    }
+
+
+    /*.extension {
+        display: none;
+    }*/
+
+    footer p {
+        margin: 7px 3px;
+        float: none;
+        width: 100%;
+    }
+
+    footer p:not(:first-of-type) {
+        padding-top: .7em;
+    }
+}
+
+
+/* Small displays */
+
+@media screen and (max-width: 490px) {
+    img {
+        display: none;
+    }
+
+    .goto-arrows {
+        display: none;
+    }
+}
